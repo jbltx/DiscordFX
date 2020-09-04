@@ -9,8 +9,8 @@
 ## Installation 
 
 1. Download the source or the zipped file from the [releases page](https://github.com/jbltx/DiscordFX/releases).
-1. In your DocFX project folder, create a new directory named `templates`, if it doesn't already exist.
-2. Copy the `templates/discordfx` directory from this repository into your `templates` folder.
+1. In your DocFX project folder, create a new directory named `templates/discordfx`, if it doesn't already exist.
+2. Copy the content from this repository into your `templates/discordfx` folder.
 3. In your `docfx.json` configuration file, add `templates/discordfx` path into `build.template` property
    ```json
    {
@@ -19,6 +19,16 @@
        }
    }
    ```
+
+## Customization
+
+#### **Colors**
+
+You can change any color which are used by the template.
+
+They are defined in the `styles/colors.css` file.
+
+To change it, just override the value in your own `styles/main.css` file for example.
 
 ## Todos
 
