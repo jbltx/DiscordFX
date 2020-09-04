@@ -4,9 +4,9 @@
 
 ### [Live Demo](https://jbltx.com/DiscordFX)
 
-![DiscordFX - Desktop Screenshot](./images/discordfx-screenshot01.png)
+![DiscordFX - Desktop Screenshot](./demo/images/discordfx-screenshot01.png)
 
-![DiscordFX - Mobile Screenshots](./images/discordfx-mobile-screenshots.png) 
+![DiscordFX - Mobile Screenshots](./demo/images/discordfx-mobile-screenshots.png) 
 
 ## Installation 
 
