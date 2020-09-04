@@ -8,7 +8,7 @@
 
 ## Installation 
 
-1. Download the source or the zipped file from the [releases page](/jbltx/DiscordFX/releases).
+1. Download the source or the zipped file from the [releases page](https://github.com/jbltx/DiscordFX/releases).
 1. In your DocFX project folder, create a new directory named `templates`, if it doesn't already exist.
 2. Copy the `templates/discordfx` directory from this repository into your `templates` folder.
 3. In your `docfx.json` configuration file, add `templates/discordfx` path into `build.template` property
