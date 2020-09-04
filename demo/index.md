@@ -2,9 +2,9 @@
 
 [DocFX](https://dotnet.github.io/docfx/index.html) template to create documentation similar to [Discord](https://discord.com/developers/docs/intro)
 
-## Live Demo
+![DiscordFX - Desktop Screenshot](./images/discordfx-screenshot01.png)
 
-*Coming soon*
+![DiscordFX - Mobile Screenshots](./images/discordfx-mobile-screenshots.png) 
 
 ## Installation 
 
@@ -29,10 +29,6 @@ You can change any color which are used by the template.
 They are defined in the `styles/colors.css` file.
 
 To change it, just override the value in your own `styles/main.css` file for example.
-
-## Todos
-
-- [ ] Add documentation versioning
 
 ## Disclaimer
 
