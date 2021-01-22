@@ -12,17 +12,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: engineerd/configurator
-      uses: engineerd/configurator@v0.0.5
+    - uses: engineerd/configurator@v0.0.5
       with:
         name: docfx.exe
         pathInArchive: docfx.exe
-        fromGitHubReleases: true
-        includePrereleases: false
-        version: latest
-        repo: https://github.com/dotnet/docfx.git
-        urlTemplate: https://github.com/dotnet/docfx/releases/download/{{version}}/docfx.zip
-        token: ${{ secrets.GITHUB_TOKEN }}
+        url: https://github.com/dotnet/docfx/releases/download/v2.56.6/docfx.zip
     - name: List stuff
       run: dir .
     - name: Testing
