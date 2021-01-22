@@ -1,0 +1,28 @@
+name: Deploy to Github Pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-deploy:
+
+    runs-on: windows-2019
+
+    steps:
+    - uses: actions/checkout@v1
+    - uses: engineerd/configurator@v0.0.5
+      with:
+        name: docfx.exe
+        pathInArchive: docfx.exe
+        fromGitHubReleases: true
+        includePrereleases: false
+        version: latest
+        repo: https://github.com/dotnet/docfx.git
+        urlTemplate: https://github.com/dotnet/docfx/releases/download/{{version}}/docfx.zip
+        token: ${{ secrets.GITHUB_TOKEN }}
+    - name: List stuff
+      run: dir .
+    - name: Testing
+      run: docfx -h 
