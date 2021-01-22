@@ -12,7 +12,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - uses: jbltx/configurator-1@9fd7104e97d5d1723cff874ea0353f98b276180c
+    - uses: jbltx/configurator-1@c0679a201166a8d7cc1e17950f95dc3c0d9ff769
       with:
         name: docfx.exe
         pathInArchive: docfx.exe
