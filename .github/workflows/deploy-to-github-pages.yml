@@ -12,7 +12,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - uses: engineerd/configurator@v0.0.5
+    - name: engineerd/configurator
+      uses: engineerd/configurator@v0.0.5
       with:
         name: docfx.exe
         pathInArchive: docfx.exe
