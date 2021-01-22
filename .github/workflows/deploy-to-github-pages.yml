@@ -17,6 +17,7 @@ jobs:
         name: docfx.exe
         pathInArchive: docfx.exe
         url: https://github.com/dotnet/docfx/releases/download/v2.56.6/docfx.zip
+        copyDirectory: true
     - name: List stuff
       run: Get-ChildItem -Path $Env:USERPROFILE/docfx
     - name: Testing
