@@ -12,12 +12,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - uses: engineerd/configurator@v0.0.5
+    - uses: jbltx/configurator@9fd7104e97d5d1723cff874ea0353f98b276180c
       with:
         name: docfx.exe
         pathInArchive: docfx.exe
         url: https://github.com/dotnet/docfx/releases/download/v2.56.6/docfx.zip
     - name: List stuff
-      run: dir .
+      run: dir %USERPROFILE%\docfx
     - name: Testing
       run: docfx -h 
