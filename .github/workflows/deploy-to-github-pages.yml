@@ -1,0 +1,24 @@
+name: Deploy to Github Pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-deploy:
+
+    runs-on: windows-2019
+
+    steps:
+    - uses: actions/checkout@v1
+    - uses: jbltx/configurator-1@c0679a201166a8d7cc1e17950f95dc3c0d9ff769
+      with:
+        name: docfx.exe
+        pathInArchive: docfx.exe
+        url: https://github.com/dotnet/docfx/releases/download/v2.56.6/docfx.zip
+        copyDirectory: true
+    - name: List stuff
+      run: Get-ChildItem -Path $Env:USERPROFILE/docfx
+    - name: Testing
+      run: docfx -h 
