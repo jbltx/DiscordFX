@@ -37,9 +37,14 @@ html, body
     right: 0;
 }
 
+img {
+    max-width: 100%;
+}
+
 h1,h2,h3,h4,h5 
 {
     color: var(--link-active-color);
+    position: relative;
 }
 
 h1, h2
@@ -111,6 +116,10 @@ a:focus, a:hover
 {
     color: var(--link-hover-color);
     text-decoration: underline;
+}
+
+a.anchorjs-link:hover {
+    text-decoration: none;
 }
 
 a.active, a:active
@@ -463,6 +472,11 @@ blockquote > p {
     background: var(--breadcrumb-bg-color);
     border-radius: 4px;
     margin-bottom: 30px;
+}
+
+#breadcrumb:empty
+{
+    display: none;
 }
 
 ul.breadcrumb 
