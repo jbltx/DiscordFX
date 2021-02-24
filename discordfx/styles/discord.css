@@ -14,6 +14,15 @@
     border-radius: 5px;
 }
 
+::marker {
+    unicode-bidi: isolate;
+    font-variant-numeric: tabular-nums;
+    text-transform: none;
+    text-indent: 0px !important;
+    text-align: start !important;
+    text-align-last: start !important;
+}
+
 *, :after, :before
 {
     -webkit-box-sizing: border-box;
@@ -39,6 +48,10 @@ html, body
 
 img {
     max-width: 100%;
+}
+
+ul > li, ol > li {
+    display: list-item;
 }
 
 h1,h2,h3,h4,h5 
@@ -91,17 +104,24 @@ p
 
 ul 
 {
-    list-style-type: none;
-    padding-inline-start: 1em;
     position: relative;
+}
+
+ul, ol 
+{
+    padding-inline-start: 3em;
 }
 
 ul.level1
 {
+    list-style-type: none;
     padding-inline-start: 0;
 }
 
-ul.level2, ul.level3 {
+ul.level2, ul.level3 
+{
+    padding-inline-start: 1em;
+    list-style-type: none;
     font-size: .9em;
 }
 
@@ -263,11 +283,6 @@ span.sidebar-item
     display: flex;
     align-items: center;
     justify-content: start;
-}
-
-.sidebar .brand 
-{
-    margin-top: .5em;
 }
 
 .logomark
