@@ -1,24 +1,30 @@
 name: Deploy to Github Pages
 
 on:
-  push:
-    branches:
-      - master
+  release:
+    types: [created]
+
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
-
-    runs-on: windows-2019
+    name: Generate and Deploy Documentation ✍🏼
+    runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
-    - uses: jbltx/configurator-1@c0679a201166a8d7cc1e17950f95dc3c0d9ff769
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Generate documentation files
+      uses: nikeee/docfx-action@v1.0.0
       with:
-        name: docfx.exe
-        pathInArchive: docfx.exe
-        url: https://github.com/dotnet/docfx/releases/download/v2.56.6/docfx.zip
-        copyDirectory: true
-    - name: List stuff
-      run: Get-ChildItem -Path $Env:USERPROFILE/docfx
-    - name: Testing
-      run: docfx -h 
+        args: demo/docfx.json
+
+    - name: Deploy to GitHub Pages
+      if: success()
+      uses: crazy-max/ghaction-github-pages@v2.2.0
+      with:
+        target_branch: gh-pages
+        build_dir: demo/_site
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
