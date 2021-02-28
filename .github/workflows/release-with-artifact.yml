@@ -17,7 +17,7 @@ jobs:
           echo "HEAD_TAG=$(git tag --points-at HEAD)" >> $GITHUB_ENV
       - name: Build project # This would actually build your project, using zip for an example artifact
         run: |
-          zip -r discordfx-$HEAD_TAG README.md LICENSE discordfx
+          zip -r discordfx-${{ env.HEAD_TAG }}.zip README.md LICENSE discordfx
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
