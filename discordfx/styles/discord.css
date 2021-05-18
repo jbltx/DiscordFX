@@ -249,8 +249,12 @@ span.sidebar-item
     background-color: var(--main-bg-color);
     flex: 1;
     overflow-y: auto;
+}
+
+.main-panel-content {
     padding: 20px 40px;
     max-width: 1440px;
+    margin: auto;
 }
 
 .top-navbar 
