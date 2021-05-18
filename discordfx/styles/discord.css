@@ -204,6 +204,11 @@ h1:first-child
     padding: 8px 16px;
 }
 
+#navbar 
+{
+    margin-top: 2em;
+}
+
 a.sidebar-item:hover, a.sidebar-item:focus 
 {
     color: var(--link-active-color);
