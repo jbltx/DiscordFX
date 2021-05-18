@@ -250,6 +250,7 @@ span.sidebar-item
     flex: 1;
     overflow-y: auto;
     padding: 20px 40px;
+    max-width: 1440px;
 }
 
 .top-navbar 
