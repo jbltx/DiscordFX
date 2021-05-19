@@ -305,6 +305,20 @@ span.sidebar-item
     padding: 0 .5em;
     font-size: .9em;
     color: var(--link-active-color);
+    font-weight: 500;
+}
+
+.brand:hover > .brand-title, 
+.brand:focus > .brand-title 
+{
+    text-decoration: underline;
+    color: var(--sidebar-item-2nd-color);
+}
+
+.brand:hover > .logomark,
+.brand:focus > .logomark
+{
+    opacity: 0.5;
 }
 
 .footer 
