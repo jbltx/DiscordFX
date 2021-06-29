@@ -12,7 +12,7 @@
 </span>{{/docurl}}
 {{#sourceurl}}
 <span class="small pull-right mobile-hide view-source">
-  <a href="{{sourceurl}}">{{__global.viewSource}}</a>
+  <a href="{{sourceurl}}" target="_blank">{{__global.viewSource}}</a>
 </span>{{/sourceurl}}
 {{/_disableContribution}}
 {{#overload}}
