@@ -252,6 +252,12 @@ span.sidebar-item
     padding: 20px 40px;
 }
 
+.view-source
+{
+    position: relative;
+    z-index: 1;
+}
+
 .top-navbar 
 {
     display: flex;
