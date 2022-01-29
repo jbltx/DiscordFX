@@ -594,7 +594,7 @@ ul.level1 > li > .expand-stub
     top: 5px;
     left: 5px;
     background-repeat: no-repeat;
-    background: url(/styles/down-arrow.svg);
+    background: url(down-arrow.svg);
 }
 
 .toc .nav > li.active > .expand-stub::before, .toc .nav > li.in > .expand-stub::before, .toc .nav > li.in.active > .expand-stub::before, .toc .nav > li.filtered > .expand-stub::before
