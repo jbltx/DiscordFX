@@ -551,6 +551,11 @@ code
     float: right;
 }
 
+.hide 
+{
+    display: none;
+}
+
 .mobile-hide 
 {
     visibility: hidden;
