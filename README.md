@@ -35,7 +35,6 @@ To change it, just override the value in your own `styles/main.css` file for exa
 ## Todos
 
 - [ ] Add documentation versioning
-- [ ] Support of TOC searching/filtering
 
 ## Disclaimer
 
