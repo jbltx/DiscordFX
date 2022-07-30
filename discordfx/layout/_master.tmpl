@@ -47,6 +47,10 @@
 
             <main class="main-panel">
 
+                {{#_enableSearch}}
+                    {{>partials/searchResults}}
+                {{/_enableSearch}}
+
                 <div role="main" class="main-panel-content hide-when-search" >
 
                     {{^_disableBreadcrumb}}
