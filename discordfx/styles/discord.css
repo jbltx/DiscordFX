@@ -580,16 +580,11 @@ code
     display: none;
 }
 
-.mobile-hide 
-{
-    visibility: hidden;
-}
-
-@media (min-width: 1024px) 
+@media (max-width: 1023.98px) 
 {
     .mobile-hide 
     {
-        visibility: visible;
+        display: none;
     }
 }
 
