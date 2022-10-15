@@ -643,6 +643,11 @@ code
     margin: 0 5px;
 }
 
+article span.small.pull-right {
+    z-index: 999;
+    position: relative;
+}
+
 li 
 {
     display: block;
