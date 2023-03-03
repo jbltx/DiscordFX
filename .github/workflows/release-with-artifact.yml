@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Archive template and license
         run: |
           zip -r discordfx-${{ github.event.release.tag_name }}.zip README.md LICENSE discordfx

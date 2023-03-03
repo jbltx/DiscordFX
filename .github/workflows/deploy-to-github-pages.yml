@@ -6,6 +6,9 @@ on:
 
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build-and-deploy:
     name: Generate and Deploy Documentation ✍🏼
@@ -13,7 +16,7 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Generate documentation files
       uses: nikeee/docfx-action@v1.0.0
@@ -21,10 +24,14 @@ jobs:
         args: demo/docfx.json
 
     - name: Deploy to GitHub Pages
-      if: success()
-      uses: crazy-max/ghaction-github-pages@v2.2.0
+      uses: JamesIves/github-pages-deploy-action@v4
       with:
-        target_branch: gh-pages
-        build_dir: demo/_site
+        folder: demo/_site
+        branch: gh-pages
+        force: false
+        clean: true
+        clean-exclude: |
+          CNAME
+          pr-preview/
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
