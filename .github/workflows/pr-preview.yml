@@ -31,3 +31,5 @@ jobs:
           source-dir: ./demo/_site/
           preview-branch: gh-pages
           umbrella-dir: pr-preview
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
